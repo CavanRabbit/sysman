@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+</head>
+<body>
+	<script type="text/javascript" src="js/findbyday.js"></script>
+
+	<div>
+	
+	
+	</div>
+	<div id="cc" >  
+    	<div  style="height:70px;">
+    		<fieldset>
+    			<legend>查询条件</legend>
+    			<table style="left:100px;">
+
+    				<tr>
+    				<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    				<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    				</tr>
+    				<tr align="center">
+    					<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    					<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    					<td>查询日期</td> <td><input id="alter_day" name="day" type="text" class="easyui-datebox" ></input> </td>
+    					<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    			
+    				<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    				<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    				<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    				<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    				<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    				
+    					<td><a id="condition_submit" href="javascript:void(0);" class="easyui-linkbutton" data-options="iconCls:'icon-search'">查询</a> </td>
+    				</tr>
+    			</table>
+    		</fieldset>
+    	</div>  
+    	<div  style="padding:5px;background:#eee;height:350px">
+		
+    		   <table id="alter_dg"></table> 
+    		 
+		</div>
+		</div>
+		
+		
+		
+		
+		
+<!-- update dialog -->
+	<div id="update">
+			
+			<form name="form0"  theme="simple" id="form0">
+	  		<p>&nbsp;</p>
+	  		<table cellspacing="20">
+	  		   <tr>
+	  		   <td align="right">申请编号</td>  
+	  		   <td><input type="text" name="id" disabled="true" id="mo_id"/></td>
+	  		   </tr>
+	  		   <tr>   
+                <td>实施情况:</td>   
+                <td>
+                 <textarea rows="10" cols="5" name="execute" style="width:150px;height:100px" 
+                 id="mo_execute"></textarea>  
+                </td>
+               </tr>  
+		      <tr>   
+                 <td>复核情况:</td>   
+              <td>
+              <textarea rows="20" cols="5" name="recheck" id="mo_recheck"  style="width:150px;height:100px"></textarea> 
+            </td>
+             </tr>  
+	
+		  	</table>
+		 </form>
+	</div>
+</body>
+</html>

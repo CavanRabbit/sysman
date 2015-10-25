@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+</head>
+<body>
+<script type="text/javascript" src="js/caseinsert.js"></script>
+<center>
+	<form id="ff" method="post"  enctype="multipart/gorm-data" style="width:500px; height:600px;">   
+	<table>
+ 
+    <tr>   
+        <td>关联问题:</td>   
+        <td><input  id="relevance" class="easyui-validatebox" 
+        data-options="required:true"  type="text" name="relevance"  /> </td>
+    </tr> 
+  
+     <tr>   
+        <td>事件描述:</td>   
+        <td>
+        <textarea rows="20" cols="5" class="easyui-validatebox" 
+        data-options="required:true" id="description" style="width:150px;height:100px"></textarea>  </td>
+    </tr>    
+   <!--  <tr>   
+        <td>开始时间:</td>   
+        <td><input  id="start" class="easyui-textbox" type="text" name="start"  />  </td>
+    </tr>  -->
+   <tr>
+        <td>开始时间:</td>   
+        <td><input class="easyui-datetimebox" name="start"  id="start"  data-options="required:true" style="width:150px"> </td>
+    </tr>  
+      
+   <!--   <tr>
+        <td>结束时间:</td>   
+        <td><input id="end" class="easyui-textbox" type="text" name="end"  />   </td>
+    </tr> -->
+   <tr>
+        <td>结束时间:</td>   
+        <td><input class="easyui-datetimebox" name="end"  id="end"  data-options="required:true" style="width:150px"> </td>
+    </tr> 
+     <tr>
+        <td>持续时长(分钟):</td>   
+        <td><input class="easyui-textbox" name="mins"  id="mins"  data-options="required:true" style="width:150px"> </td>
+    </tr> 
+    <tr>   
+        <td>影响范围:</td>   
+        <td><input class="easyui-validatebox" 
+        data-options="required:true"  type="text" name="scope"  id="scope"/>  </td> 
+    </tr> 
+     <tr>   
+        <td>解决措施:</td>   
+        <td>
+        <textarea rows="20" cols="5" id="solution" class="easyui-validatebox" 
+        data-options="required:true" style="width:150px;height:100px"></textarea>  </td>
+    </tr>  
+ 	<tr>   
+        <td>事件原因:</td>   
+        <td>
+        <textarea rows="20" cols="5" id="reason" class="easyui-validatebox" 
+        data-options="required:true" style="width:150px;height:100px"></textarea>  </td>
+    </tr>  
+     <tr>   
+        <td>备注:</td>   
+        <td>
+        <textarea rows="20" cols="5" id="remark" style="width:150px;height:100px"></textarea>  </td>
+    </tr>  
+
+	<tr>
+	<td></td>
+	<td align="right"> <input  id="sbmt" type="button" value="提交" /></td>
+	</tr>
+	</table>
+    
+</form> 
+</center>
+</body>
+</html>

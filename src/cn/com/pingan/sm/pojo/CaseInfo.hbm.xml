@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="cn.com.pingan.sm.pojo">
+
+    <class name="CaseInfo" table="CASEINFO">
+        <id name="id" column="ID">
+            <generator class="assigned"/>
+        </id>
+        <property name="description" type="java.lang.String" column="DESCRIPTION"/>
+ 	    <property name="relevance" type="java.lang.String" column="RELEVANCE"/>
+ 	    <property name="starttime" type="java.sql.Timestamp" column="STARTTIME"/>
+ 	    <property name="endtime" type="java.sql.Timestamp" column="ENDTIME"/>
+ 	    <property name="scope" type="java.lang.String" column="SCOPE"/>
+ 	    <property name="solution" type="java.lang.String" column="SOLUTION"/>
+ 	    <property name="reason" type="java.lang.String" column="REASON"/>
+ 	    <property name="remark" type="java.lang.String" column="REMARK"/>
+ 	    <property name="mins" type="java.lang.Float" column="MINS"/>
+ 	    
+    </class>
+
+</hibernate-mapping>

@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+</head>
+<body>
+<script type="text/javascript" src="js/alterinsert.js"></script>
+<center>
+	<form id="ff" method="post"  enctype="multipart/gorm-data" style="width:500px; height:600px;">   
+	<table>
+    <tr>  
+       <td>变更日期:</td>   
+       <td> <input id="date" type="text" class="easyui-datebox"  data-options="required:true"
+        style="width:150px" name="date"><td> 
+
+    </tr>   
+    <tr>   
+        <td>系统名称:</td>   
+        <td><input  id="sysname" class="easyui-validatebox" 
+        data-options="required:true" type="text" name="sysname"  /> </td>
+    </tr>     
+     <tr>   
+        <td>变更内容:</td>   
+        <td>
+        <textarea rows="10" cols="5" id="content" class="easyui-validatebox" 
+        data-options="required:true"  style="width:150px;height:100px"></textarea>  </td>
+    </tr>  
+    <tr>   
+        <td>申请变更号:</td>   
+        <td><input  id="id" class="easyui-validatebox" 
+        data-options="required:true"  type="text" name="id"  />   </td>
+    </tr> 
+     <tr>   
+        <td>所属平台:</td>   
+        <td><input  class="easyui-validatebox" 
+        data-options="required:true"  type="text" name="platform" id="platform"/>   </td>
+    </tr> 
+    <tr>   
+        <td>风险评估:</td>   
+        <td><input  class="easyui-validatebox" 
+        data-options="required:true"  type="text" name="risk" id="risk"/>   </td>
+    </tr> 
+    <tr>   
+        <td>是否完成审批:</td>   
+        <td><input class="easyui-validatebox" 
+        data-options="required:true"  type="text" name="isagree"  id="isagree"/>  </td> 
+    </tr> 
+    <tr>   
+        <td>实施情况:</td>   
+        <td>
+        <textarea rows="10" cols="5" id="execute" style="width:150px;height:100px"></textarea>  
+        </td>
+    </tr>  
+  <tr>   
+        <td>复核情况:</td>   
+        <td>
+        <textarea rows="20" cols="5" id="recheck" style="width:150px;height:100px"></textarea> 
+         </td>
+    </tr>  
+    <tr>   
+        <td>实施人:</td>   
+        <td><input  class="easyui-validatebox" 
+        data-options="required:true"  type="text" name="executer" id="executer" />   </td>
+    </tr> 
+    <tr>   
+        <td>双人复核:</td>   
+        <td><input class="easyui-validatebox" 
+        data-options="required:true"   type="text" name="rechecker" id="rechecker"/>   </td>
+    </tr> 
+	<tr>
+	<td></td>
+	<td align="right"> <input  id="sbmt" type="button" value="提交" /></td>
+	</tr>
+	</table>
+    
+</form> 
+</center>
+</body>
+</html>
