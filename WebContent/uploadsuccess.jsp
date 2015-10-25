@@ -4,10 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>导入成功</title>
+<title>导入成功!</title>
 </head>
 <body>
-	<h1>导入成功</h1>
+	<h1>导入成功!</h1>
 	<a href="uploadfile.jsp"><input type="button" value="继续导入"></input></a>
 	
 </body>

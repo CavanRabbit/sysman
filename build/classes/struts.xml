@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+  	
+<package name="sm" extends="struts-default,json-default">
+	
+    <action name="alter_add" class="cn.com.pingan.sm.action.AlterAction" method="add">
+   		<result type="json">
+   			<param name="root">result</param>
+   		</result>
+   </action>
+       <action name="alter_del" class="cn.com.pingan.sm.action.AlterAction" method="delete">
+   		<result type="json">
+   			<param name="root">result</param>
+   		</result>
+   </action>
+     <action name="alter_update" class="cn.com.pingan.sm.action.AlterAction" method="update">
+   		<result type="json">
+   			<param name="root">result</param>
+   		</result>
+   </action>
+   <action name="alter_find_date" class="cn.com.pingan.sm.action.AlterAction" method="findByDate">
+   		<result type="json">
+   			<param name="root">rows</param>
+   		</result>
+   </action>
+
+   <action name="alter_find_scope" class="cn.com.pingan.sm.action.AlterAction" method="findByScope">
+   		<result type="json">
+   			<param name="root">rows</param>
+   		</result>
+   </action>
+	
+    <action name="case_add" class="cn.com.pingan.sm.action.CaseAction" method="add">
+   		<result type="json">
+   			<param name="root">result</param>
+   		</result>
+   </action>
+      <action name="case_find_date" class="cn.com.pingan.sm.action.CaseAction" method="findByDate">
+   		<result type="json">
+   			<param name="root">row</param>
+   		</result>
+   </action>
+   
+    <action name="case_find_scope" class="cn.com.pingan.sm.action.CaseAction" method="findByScope">
+   		<result type="json">
+   			<param name="root">row</param>
+   		</result>
+   </action>
+   <action name="uploadfile" class="cn.com.pingan.sm.action.UploadAction" method="upload">
+	   <!--   <result name="success">uploadsuccess.jsp</result>
+	    <result name="failed">uploadfailed.jsp</result>
+	    -->
+	   <result type="json">
+   			<param name="root">result</param>
+   		</result>
+   </action>
+</package>
+
+</struts>
