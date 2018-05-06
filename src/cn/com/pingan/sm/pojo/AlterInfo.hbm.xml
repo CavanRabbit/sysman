@@ -6,20 +6,20 @@
 
 <hibernate-mapping package="cn.com.pingan.sm.pojo">
 
-    <class name="AlterInfo" table="ALTERINFO">
-        <id name="id" type="java.lang.String" column="ID" >
+    <class name="AlterInfo" table="alter_info">
+        <id name="id" type="java.lang.Integer" column="id" >
             <generator class="assigned"/>
         </id>
-        <property name="alterdate" type="java.sql.Date" column="ALTERDATE"/>
-        <property name="content" type="java.lang.String" column="CONTENT"/>
-        <property name="sysname" type="java.lang.String" column="SYSNAME"/>
-        <property name="risk" type="java.lang.String" column="RISK"/>
-        <property name="isagree" type="java.lang.String" column="ISAGREE"/>
-        <property name="execute" type="java.lang.String" column="EXECUTE"/>
-        <property name="rechecker" type="java.lang.String" column="RECHECKER"/>
-        <property name="executer" type="java.lang.String" column="EXECUTER"/>
-        <property name="recheck" type="java.lang.String" column="RECHECK"/>
-        <property name="platform" type="java.lang.String" column="PLATFORM"/>
+        <property name="alterdate" type="java.sql.Date" column="alter_date"/>
+        <property name="content" type="java.lang.String" column="content"/>
+        <property name="sysname" type="java.lang.String" column="sysname"/>
+        <property name="risk" type="java.lang.String" column="risk"/>
+        <property name="isagree" type="java.lang.String" column="is_agree"/>
+        <property name="execute" type="java.lang.String" column="execute"/>
+        <property name="rechecker" type="java.lang.String" column="rechecker"/>
+        <property name="executer" type="java.lang.String" column="executer"/>
+        <property name="recheck" type="java.lang.String" column="recheck"/>
+        <property name="platform" type="java.lang.String" column="platform"/>
         
     </class>
 
