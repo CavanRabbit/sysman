@@ -32,7 +32,7 @@ public class AlterDaoImpl implements AlterDao{
 	public AlterInfo get(String id,boolean hasNext) {
 		// TODO Auto-generated method stub
 		
-		String sql = "SELECT * FROM ALTERINFO WHERE ID=?";
+		String sql = "SELECT * FROM ALTER_INFO WHERE ID=?";
 		try{
 			SQLQuery query = session.createSQLQuery(sql);
 			query.setString(0, id);
@@ -46,10 +46,10 @@ public class AlterDaoImpl implements AlterDao{
 		
 		}catch(Exception e){
 			if(session==null)
-				System.out.println("»ñÈ¡sessionÊ§°Ü");
-			System.out.println("²éÑ¯Ê§°Ü");
+				System.out.println("è·å–sessionå¤±è´¥");
+			System.out.println("æŸ¥è¯¢å¤±è´¥");
 			return null;
-			//Ö»ÊÇÒ»¸öÖĞ¼ä¹ı³Ì£¬²»ÓÃ¹Ø±Õsession
+			//åªæ˜¯ä¸€ä¸ªä¸­é—´è¿‡ç¨‹ï¼Œä¸ç”¨å…³é—­session
 		}finally{
 			if( ! hasNext ){
 				session.close();
@@ -74,9 +74,9 @@ public class AlterDaoImpl implements AlterDao{
 			}
 		}catch(Exception e){
 			if (session==null){
-				System.out.println("»ñÈ¡sessionÊ§°Ü");
+				System.out.println("è·å–sessionå¤±è´¥");
 			}
-			System.out.println("ÊÂÎñÊ§°Ü");
+			System.out.println("äº‹åŠ¡å¤±è´¥");
 			tx.rollback();
 			return "transaction failed";
 		}finally{
@@ -105,9 +105,9 @@ public class AlterDaoImpl implements AlterDao{
 			}
 		}catch(Exception e){
 			if (session==null){
-				System.out.println("»ñÈ¡sessionÊ§°Ü");
+				System.out.println("è·å–sessionå¤±è´¥");
 			}
-			System.out.println("ÊÂÎñÊ§°Ü");
+			System.out.println("äº‹åŠ¡å¤±è´¥");
 			tx.rollback();
 			return "transaction failed";
 		}finally{
@@ -134,9 +134,9 @@ public class AlterDaoImpl implements AlterDao{
 
 		}catch(Exception e){
 			if (session==null){
-				System.out.println("»ñÈ¡sessionÊ§°Ü");
+				System.out.println("è·å–sessionå¤±è´¥");
 			}
-			System.out.println("ÊÂÎñÊ§°Ü");
+			System.out.println("äº‹åŠ¡å¤±è´¥");
 			tx.rollback();
 			return "transaction failed";
 		}finally{
@@ -160,9 +160,9 @@ public class AlterDaoImpl implements AlterDao{
 			return alterList;
 		}catch(Exception e){
 			if (session==null){
-				System.out.println("»ñÈ¡sessionÊ§°Ü");
+				System.out.println("è·å–sessionå¤±è´¥");
 			}
-			System.out.println("²éÑ¯Ê§°Ü");
+			System.out.println("æŸ¥è¯¢å¤±è´¥");
 			return null;
 		}finally{
 			if( ! hasNext ){
@@ -185,9 +185,9 @@ public class AlterDaoImpl implements AlterDao{
 			return alterList;
 		}catch(Exception e){
 			if (session==null){
-				System.out.println("»ñÈ¡sessionÊ§°Ü");
+				System.out.println("è·å–sessionå¤±è´¥");
 			}
-			System.out.println("²éÑ¯Ê§°Ü");
+			System.out.println("æŸ¥è¯¢å¤±è´¥");
 			return null;
 		}finally{
 			if( ! hasNext ){
