@@ -51,9 +51,9 @@ public class CaseDaoImpl implements CaseDao {
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			if (session==null){
-				System.out.println("ªÒ»°session ß∞‹");
+				System.out.println("Ëé∑ÂèñsessionÂ§±Ë¥•");
 			}
-			System.out.println(" ¬ŒÒ ß∞‹");
+			System.out.println("‰∫ãÂä°Â§±Ë¥•");
 			tx.rollback();
 			return "transaction failed";
 		}finally{
@@ -85,9 +85,9 @@ public class CaseDaoImpl implements CaseDao {
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			if (session==null){
-				System.out.println("ªÒ»°session ß∞‹");
+				System.out.println("Ëé∑ÂèñsessionÂ§±Ë¥•");
 			}
-			System.out.println(" ¬ŒÒ ß∞‹");
+			System.out.println("‰∫ãÂä°Â§±Ë¥•");
 			tx.rollback();
 			return "transaction failed";
 		}finally{
@@ -118,25 +118,25 @@ public class CaseDaoImpl implements CaseDao {
 
 		List<CaseInfo> caseList = new ArrayList<CaseInfo>();
 
-		//»’∆⁄∏Ò ΩªØ∫Ø ˝
+		//Êó•ÊúüÊ†ºÂºèÂåñÂáΩÊï∞
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 	
 		if(date==null){
 			
 			//date = sdf.format(new java.util.Date());
-			//»’¿˙∂‘œÛ
+			//Êó•ÂéÜÂØπË±°
 			Calendar cal = Calendar.getInstance();
 			cal.setTime(new java.util.Date());
-			//«∞“ªÃÏµƒ»’∆⁄
+			//Ââç‰∏ÄÂ§©ÁöÑÊó•Êúü
 			cal.add(Calendar.DAY_OF_MONTH, -1);
-			//Ω´java.util.Date◊™ªª≥…java.sql.Date
+			//Â∞Üjava.util.DateËΩ¨Êç¢Êàêjava.sql.Date
 			date = sdf.format(cal.getTime());
 
 		}
 		//oracle
-		String sql = "SELECT * FROM CASEINFO WHERE TRUNC(STARTTIME)=DATE "+"'"+date+"'";
+		String sql = "SELECT * FROM CASE_INFO WHERE TRUNC(STARTTIME)=DATE "+"'"+date+"'";
         //mysql
-		//String sql = "SELECT * FROM CASEINFO WHERE DATE_FORMAT(STARTTIME, '%Y-%m-%d')=DATE(?)";
+		//String sql = "SELECT * FROM CASE_INFO WHERE DATE_FORMAT(STARTTIME, '%Y-%m-%d')=DATE(?)";
 			try {
 				SQLQuery query = session.createSQLQuery(sql);
 				query.setString(0, date);
@@ -146,9 +146,9 @@ public class CaseDaoImpl implements CaseDao {
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				if (session==null){
-					System.out.println("ªÒ»°session ß∞‹");
+					System.out.println("Ëé∑ÂèñsessionÂ§±Ë¥•");
 				}
-				System.out.println("≤È—Ø ß∞‹");
+				System.out.println("Êü•ËØ¢Â§±Ë¥•");
 				return null;
 			}finally{
 				if( ! hasNext ){
@@ -168,11 +168,11 @@ public class CaseDaoImpl implements CaseDao {
 	
 		//SimpleDateFormat sdf2 = new SimpleDateFormat("yyyy-MM-dd");
 		//oracle
-		String sql = "SELECT * FROM CASEINFO WHERE TRUNC(STARTTIME)>=DATE "+"'"+sdate+"'"+
+		String sql = "SELECT * FROM CASE_INFO WHERE TRUNC(STARTTIME)>=DATE "+"'"+sdate+"'"+
 			"AND TRUNC(STARTTIME)<=DATE "+"'"+edate+"'";
 		
 		//mysql
-		//String sql = "SELECT * FROM CASEINFO WHERE DATE_FORMAT(STARTTIME, '%Y-%m-%d')>=DATE( ?) AND DATE_FORMAT(STARTTIME), '%Y-%m-%d')<=DATE(?)";
+		//String sql = "SELECT * FROM CASE_INFO WHERE DATE_FORMAT(STARTTIME, '%Y-%m-%d')>=DATE( ?) AND DATE_FORMAT(STARTTIME), '%Y-%m-%d')<=DATE(?)";
 
 		try {
 			SQLQuery query = session.createSQLQuery(sql);
@@ -184,9 +184,9 @@ public class CaseDaoImpl implements CaseDao {
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			if (session==null){
-				System.out.println("ªÒ»°session ß∞‹");
+				System.out.println("Ëé∑ÂèñsessionÂ§±Ë¥•");
 			}
-			System.out.println("≤È—Ø ß∞‹");
+			System.out.println("Êü•ËØ¢Â§±Ë¥•");
 			return null;
 		}finally{
 			if( ! hasNext ){
@@ -201,7 +201,7 @@ public class CaseDaoImpl implements CaseDao {
 	public CaseInfo get(String id,boolean hasNext) {
 		// TODO Auto-generated method stub
 		
-		String sql = "SELECT * FROM CASEINFO WHERE ID=:id";
+		String sql = "SELECT * FROM CASE_INFO WHERE ID=:id";
 		try {
 			SQLQuery query = session.createSQLQuery(sql);
 			query.setString("id", id);
@@ -215,8 +215,8 @@ public class CaseDaoImpl implements CaseDao {
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			if(session==null)
-				System.out.println("ªÒ»°session ß∞‹");
-			System.out.println("≤È—Ø ß∞‹");
+				System.out.println("Ëé∑ÂèñsessionÂ§±Ë¥•");
+			System.out.println("Êü•ËØ¢Â§±Ë¥•");
 			return null;
 		}finally{
 			if( ! hasNext ){
